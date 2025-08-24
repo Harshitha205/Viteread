@@ -3,8 +3,8 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Express.js](https://img.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 VitaRead is a modern reading tracker platform designed to make reading more engaging and rewarding. Inspired by platforms like StoryGraph and the gamification of Duolingo, it combines a beautiful, literary-inspired aesthetic with interactive features to help you track your reading journey, set goals, and earn achievements.
@@ -32,7 +32,7 @@ This project is built with a modern, full-stack architecture.
 * **Backend:**
     * **Runtime:** Node.js
     * **Framework:** Express.js
-    * **Database:** PostgreSQL
+    * **Database:** MongoDB
     * **Authentication:** JWT (JSON Web Tokens)
 
 ---
@@ -45,7 +45,7 @@ To get a local copy up and running, follow these simple steps.
 
 * Node.js (v18 or higher)
 * npm
-* A PostgreSQL database
+* A MongoDB database (e.g., MongoDB Atlas)
 
 ### Installation & Setup
 
@@ -56,13 +56,17 @@ To get a local copy up and running, follow these simple steps.
     ```
 
 2.  **Set up the Backend:**
-    * Set up your PostgreSQL database.
+    * Set up your MongoDB database and get your connection string.
     * Navigate to the `/backend` directory and install dependencies:
         ```sh
         cd backend
         npm install
         ```
-    * Create a `.env` file and add your database connection string and JWT secret.
+    * Create a `.env` file and add your MongoDB connection string and JWT secret:
+        ```env
+        MONGO_URI="your-mongodb-connection-string"
+        JWT_SECRET="your-jwt-secret-key"
+        ```
 
 3.  **Set up the Frontend:**
     * Navigate to your frontend directory.
@@ -72,7 +76,7 @@ To get a local copy up and running, follow these simple steps.
         npm install
         ```
     * Create a `.env` file in the root of your frontend project.
-    * Add the URL for your backend API.
+    * Add the URL for your backend API:
         ```env
         VITE_API_URL="http://localhost:3001"
         ```
