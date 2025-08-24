@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VitaRead Design System - Warm, literary-inspired palette */
+
+@layer base {
+  :root {
+    /* Core Colors - Book & Reading Inspired */
+    --background: 33 25% 97%;
+    --foreground: 220 25% 15%;
+
+    --card: 33 25% 99%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 33 25% 99%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Literary Navy Primary */
+    --primary: 220 45% 20%;
+    --primary-foreground: 33 25% 97%;
+
+    /* Warm Amber Secondary */
+    --secondary: 35 85% 88%;
+    --secondary-foreground: 220 45% 20%;
+
+    /* Sage Green Muted */
+    --muted: 120 15% 90%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Warm Cream Accent */
+    --accent: 40 30% 94%;
+    --accent-foreground: 220 45% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 33 25% 97%;
+
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 220 45% 20%;
+
+    --radius: 0.75rem;
+
+    /* VitaRead Custom Colors */
+    --amber-warm: 35 85% 75%;
+    --amber-glow: 35 90% 85%;
+    --sage-deep: 120 25% 75%;
+    --navy-soft: 220 35% 85%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--amber-warm)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--amber-glow)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent)));
+
+    /* Shadows */
+    --shadow-warm: 0 4px 20px -4px hsl(var(--amber-warm) / 0.25);
+    --shadow-soft: 0 2px 10px -2px hsl(var(--primary) / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Responsive text clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Custom breakpoint utilities */
+  .xs\:grid-cols-2 {
+    @media (min-width: 475px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  .xs\:flex-row {
+    @media (min-width: 475px) {
+      flex-direction: row;
+    }
+  }
+  
+  .xs\:justify-between {
+    @media (min-width: 475px) {
+      justify-content: space-between;
+    }
+  }
+  
+  .xs\:items-center {
+    @media (min-width: 475px) {
+      align-items: center;
+    }
+  }
+  
+  .xs\:items-start {
+    @media (min-width: 475px) {
+      align-items: flex-start;
+    }
+  }
+  
+  .xs\:inline {
+    @media (min-width: 475px) {
+      display: inline;
+    }
+  }
+  
+  .xs\:hidden {
+    @media (min-width: 475px) {
+      display: none;
+    }
+  }
+  
+  .xs\:self-auto {
+    @media (min-width: 475px) {
+      align-self: auto;
+    }
+  }
+}
